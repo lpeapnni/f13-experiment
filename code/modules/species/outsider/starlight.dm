@@ -9,7 +9,6 @@
 		/decl/background_category/heritage = /decl/background_detail/heritage/other
 	)
 	*/
-	additional_langs = list(/decl/language/mantid/worldnet, /decl/language/mantid) // F13 EDIT - NO BACKGROUNDS
 	hidden_from_codex = TRUE
 
 /decl/bodytype/starlight

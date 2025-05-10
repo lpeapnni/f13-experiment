@@ -25,7 +25,7 @@
 			for(var/lang in current_species.additional_langs)
 				if(GET_DECL(lang))
 					var/decl/language/lang_decl = GET_DECL(lang)
-					return lang_decl.get_random_name(null, gender)
+					return lang_decl.get_random_name(gender)
 	// F13 EDIT END
 
 	return capitalize(pick(gender == FEMALE ? global.using_map.first_names_female : global.using_map.first_names_male)) + " " + capitalize(pick(global.using_map.last_names))

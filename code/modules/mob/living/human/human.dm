@@ -911,6 +911,8 @@
 	if(!QDELETED(src) && fluids?.total_volume)
 		species.fluid_act(src, fluids)
 
+/*
+// F13 EDIT - NO BACKGROUNDS
 /mob/living/human/proc/set_background_value(var/cat_type, var/decl/background_detail/_background, var/defer_language_update)
 	if(ispath(_background, /decl/background_detail))
 		_background = GET_DECL(_background)
@@ -919,8 +921,6 @@
 		if(!defer_language_update)
 			update_languages()
 
-/*
-// F13 EDIT - NO BACKGROUNDS
 /mob/living/proc/get_background_datum_by_flag(background_flag)
 	var/list/all_categories = global.using_map.get_background_categories()
 	for(var/cat_type in all_categories)

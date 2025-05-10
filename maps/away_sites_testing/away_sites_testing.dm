@@ -3,6 +3,8 @@
 	#include "away_sites_testing_lobby.dm"
 	#include "blank.dmm"
 
+	/*
+	// F13 REMOVAL - WE DON'T NEED ALL THIS SHIT
 	#include "../../mods/content/government/away_sites/icarus/icarus.dm"
 	#include "../../mods/content/government/ruins/ec_old_crash/ec_old_crash.dm"
 	#include "../../mods/content/generic_shuttles/tanker/tanker.dm"
@@ -21,6 +23,7 @@
 	#include "../away/unishi/unishi.dm"
 	#include "../away/yacht/yacht.dm"
 	#include "../away/liberia/liberia.dm"
+	*/
 
 	#define USING_MAP_DATUM /datum/map/away_sites_testing
 
