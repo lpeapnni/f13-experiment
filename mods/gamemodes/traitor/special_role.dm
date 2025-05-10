@@ -74,8 +74,12 @@
 		var/list/dudes = list()
 		for(var/mob/living/human/man in global.player_list)
 			if(man.client)
+				/*
+				// F13 REMOVAL - NO BACKGROUNDS
 				var/decl/background_detail/background = man.get_background_datum_by_flag(BACKGROUND_FLAG_IDEOLOGY)
 				if(istype(background) && prob(background.subversive_potential))
+				*/
+				if(prob(25)) // F13 EDIT - NO BACKGROUNDS
 					dudes += man
 			dudes -= player.current
 		for(var/datum/objective/obj in player.objectives)

@@ -548,7 +548,8 @@
 
 	return TRUE
 
-
+/*
+// F13 REMOVAL - NO BACKGROUNDS
 //Syncs background categories/values to the currently set species, and may trigger a language update
 /mob/living/human/proc/apply_species_background_info()
 	var/update_lang
@@ -562,6 +563,7 @@
 
 	if(update_lang)
 		update_languages()
+*/
 
 //Drop anything that cannot be worn by the current species of the mob
 /mob/living/human/proc/apply_species_inventory_restrictions()
@@ -631,13 +633,18 @@
 	reset_offsets()
 
 /mob/living/human/proc/update_languages()
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	if(!length(background_info))
 		log_warning("'[src]'([x], [y], [z]) doesn't have any background info set and is attempting to update its language!!")
+	*/
 
 	var/list/permitted_languages = list()
 	var/list/free_languages =      list()
-	var/list/default_languages =   list()
+	// var/list/default_languages =   list() // F13 REMOVAL - NO BACKGROUNDS
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	for(var/thing in background_info)
 		var/decl/background_detail/check = background_info[thing]
 		if(istype(check))
@@ -652,6 +659,16 @@
 				free_languages    |= lang
 			for(var/lang in check.get_spoken_languages())
 				permitted_languages |= lang
+	*/
+
+	// F13 EDIT START - NO BACKGROUNDS
+	if(species)
+		for(var/lang in species.additional_langs)
+			free_languages |= lang
+			permitted_languages |= lang
+		for(var/lang in species.secondary_langs)
+			permitted_languages |= lang
+	// F13 EDIT END
 
 	for(var/decl/language/lang in languages)
 		// Forbidden languages are always removed.
@@ -665,16 +682,22 @@
 			// Background-granted languages are fine.
 			if(lang.type in permitted_languages)
 				continue
+		/*
+		// F13 REMOVAL - NO BACKGROUNDS
 		// This language is Not Fine, remove it.
 		if(lang.type == default_language)
 			default_language = null
+		*/
 		remove_language(lang.type)
 
 	for(var/thing in free_languages)
 		add_language(thing)
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	if(length(default_languages) && isnull(default_language))
 		default_language = default_languages[1]
+	*/
 
 /mob/living/proc/bodypart_is_covered(target_zone)
 	var/obj/item/organ/external/affecting = GET_EXTERNAL_ORGAN(src, target_zone)
@@ -888,6 +911,8 @@
 	if(!QDELETED(src) && fluids?.total_volume)
 		species.fluid_act(src, fluids)
 
+/*
+// F13 EDIT - NO BACKGROUNDS
 /mob/living/human/proc/set_background_value(var/cat_type, var/decl/background_detail/_background, var/defer_language_update)
 	if(ispath(_background, /decl/background_detail))
 		_background = GET_DECL(_background)
@@ -911,6 +936,7 @@
 	if(!istype(., /decl/background_detail))
 		. = global.using_map.default_background_info[cat_type]
 		PRINT_STACK_TRACE("get_background_datum() tried to return a non-instance value for background category '[cat_type]' - full background list: [json_encode(background_info)] default species culture list: [json_encode(global.using_map.default_background_info)]")
+*/
 
 /mob/living/human/get_digestion_product()
 	return species.get_digestion_product(src)
@@ -1006,7 +1032,8 @@
 		try_generate_default_name()
 
 	species.handle_pre_spawn(src)
-	apply_species_background_info()
+	// apply_species_background_info() // F13 REMOVAL - NO BACKGROUNDS
+	update_languages() // F13 EDIT - NO BACKGROUNDS
 	species.handle_post_spawn(src)
 
 	supplied_appearance?.apply_appearance_to(src)

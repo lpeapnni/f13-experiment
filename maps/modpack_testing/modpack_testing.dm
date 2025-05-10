@@ -3,6 +3,8 @@
 	#include "modpack_testing_lobby.dm"
 	#include "blank.dmm"
 
+	/*
+	// F13 REMOVAL
 	#include "../../mods/gamemodes/cult/_cult.dme"
 	#include "../../mods/gamemodes/deity/_deity.dme"
 	#include "../../mods/gamemodes/heist/_heist.dme"
@@ -12,19 +14,31 @@
 	#include "../../mods/gamemodes/traitor/_traitor.dme"
 	#include "../../mods/gamemodes/spyvspy/_spyvspy.dme"
 	#include "../../mods/gamemodes/mixed/_mixed.dme"
+	*/
 
 	#include "../../mods/content/mundane.dm"
 	#include "../../mods/content/scaling_descriptors.dm"
 
+	/*
+	// F13 REMOVAL
 	#include "../../mods/content/dungeon_loot/_dungeon_loot.dme"
 	#include "../../mods/content/bigpharma/_bigpharma.dme"
+	*/
 	#include "../../mods/content/byond_membership/_byond_membership.dm"
+	/*
+	// F13 REMOVAL
 	#include "../../mods/content/corporate/_corporate.dme"
 	#include "../../mods/content/generic_shuttles/_generic_shuttles.dme"
 	#include "../../mods/content/government/_government.dme"
+	*/
 	#include "../../mods/content/matchmaking/_matchmaking.dme"
+	/*
+	// F13 REMOVAL
 	#include "../../mods/content/modern_earth/_modern_earth.dme"
+	*/
 	#include "../../mods/content/mouse_highlights/_mouse_highlight.dme"
+	/*
+	// F13 REMOVAL
 	#include "../../mods/content/shackles/_shackles.dme"
 	#include "../../mods/content/xenobiology/_xenobiology.dme"
 	#include "../../mods/content/pheromones/_pheromones.dme"
@@ -43,6 +57,7 @@
 	#include "../../mods/species/utility_frames/_utility_frames.dme"
 	#include "../../mods/species/bayliens/_bayliens.dme"
 	#include "../../mods/species/vox/_vox.dme"
+	*/
 
 	#define USING_MAP_DATUM /datum/map/modpack_testing
 

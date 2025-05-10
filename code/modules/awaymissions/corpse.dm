@@ -94,11 +94,16 @@
 		else
 			M.randomize_eye_color()
 
+	/*
 	var/decl/background_detail/background = M.get_background_datum_by_flag(BACKGROUND_FLAG_NAMING)
 	if(background && CORPSE_SPAWNER_RANDOM_NAME & spawn_flags)
 		M.SetName(background.get_random_name(M.gender))
 	else
 		M.SetName(name)
+	*/
+	// F13 EDIT START - NO BACKGROUNDS
+	M.SetName(random_name(M.gender, species_choice))
+	// F13 EDIT END
 	M.real_name = M.name
 
 /obj/abstract/landmark/corpse/proc/equip_corpse_outfit(var/mob/living/human/M)

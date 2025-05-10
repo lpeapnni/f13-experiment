@@ -166,12 +166,16 @@
 
 /obj/item/clothing/mask/rubber/species/Initialize()
 	. = ..()
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	visible_name = species
 	var/decl/species/S = get_species_by_key(species)
 	if(istype(S))
 		var/decl/background_detail/C = GET_DECL(S.default_background_info[/decl/background_category/heritage])
 		if(istype(C))
 			visible_name = C.get_random_name(pick(MALE,FEMALE))
+	*/
+	visible_name = random_name(pick(MALE,FEMALE), species) // F13 EDIT - NO BACKGROUNDS
 
 /obj/item/clothing/mask/rubber/species/cat
 	name = "cat mask"

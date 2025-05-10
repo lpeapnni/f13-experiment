@@ -1,3 +1,5 @@
+/*
+// F13 REMOVAL - NO BACKGROUNDS
 /decl/codex_category/cultures
 	name = "Factions and Culture"
 	desc = "Prominent planets, cultures, factions and religions of known space."
@@ -14,3 +16,4 @@
 			)
 			items |= entry.name
 	. = ..()
+*/

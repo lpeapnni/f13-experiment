@@ -29,6 +29,8 @@
 		/decl/emote/exertion/synthetic/creak
 	)
 
+	additional_langs = list(/decl/language/human/common, /decl/language/sign) // F13 EDIT - NO BACKGROUNDS (PUT THIS SHIT IN A MOD)
+
 /decl/species/human/get_root_species_name(var/mob/living/human/H)
 	return SPECIES_HUMAN
 

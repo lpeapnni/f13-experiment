@@ -3,9 +3,12 @@
 	butchery_data = null
 	spawn_flags = SPECIES_IS_RESTRICTED
 	available_pronouns = list(/decl/pronouns/neuter)
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	force_background_info = list(
 		/decl/background_category/heritage = /decl/background_detail/heritage/other
 	)
+	*/
 	hidden_from_codex = TRUE
 
 /decl/bodytype/starlight

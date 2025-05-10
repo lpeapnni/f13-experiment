@@ -111,9 +111,12 @@ var/global/list/symbiote_starting_points = list()
 		var/obj/item/organ/external/head = GET_EXTERNAL_ORGAN(H, BP_HEAD)
 		if(BP_IS_PROSTHETIC(head) || BP_IS_CRYSTAL(head) || head.has_growths())
 			continue
+		/*
+		// F13 REMOVAL - NO BACKGROUNDS
 		var/decl/background_detail/faction/symbiotic/background = H.get_background_datum_by_flag(BACKGROUND_FLAG_IDEOLOGY)
 		if(!istype(background) || background.matches_to_role != type)
 			continue
+		*/
 		. += H
 		if(just_checking)
 			return

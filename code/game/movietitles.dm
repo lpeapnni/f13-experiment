@@ -75,6 +75,8 @@ var/global/list/end_titles
 		if(H.ckey && H.client)
 			if(H.client.get_preference_value(/datum/client_preference/show_ckey_credits) == PREF_SHOW)
 				showckey = 1
+		/*
+		// F13 REMOVAL - NO BACKGROUNDS
 		var/decl/background_detail/background = H.get_background_datum_by_flag(BACKGROUND_FLAG_NAMING)
 		if(!background || !(H.species.spawn_flags & SPECIES_CAN_JOIN) || prob(10))
 			background = GET_DECL(/decl/background_detail/heritage/human)
@@ -86,6 +88,17 @@ var/global/list/end_titles
 				chunk += "[used_name]\t \t \t \t[uppertext(pronouns.him)]SELF"
 		else
 			chunk += "[uppertext(background.get_random_name(H, H.gender))] a.k.a. '[uppertext(H.ckey)]'\t \t \t \t[uppertext(used_name)][job]"
+		*/
+		// F13 EDIT START - NO BACKGROUNDS
+		if(!showckey)
+			if(prob(90))
+				chunk += "[random_name(H.gender, null)]\t \t \t \t[uppertext(used_name)][job]"
+			else
+				var/decl/pronouns/pronouns = H.get_pronouns()
+				chunk += "[used_name]\t \t \t \t[uppertext(pronouns.him)]SELF"
+		else
+			chunk += "[uppertext(random_name(H.gender, null))] a.k.a. '[uppertext(H.ckey)]'\t \t \t \t[uppertext(used_name)][job]"
+		// F13 EDIT END
 		chunksize++
 		if(chunksize > 2)
 			cast += "<center>[jointext(chunk,"<br>")]</center>"
@@ -118,9 +131,13 @@ var/global/list/end_titles
 		if(!C.holder)
 			continue
 		if(C.holder.rights & (R_DEBUG|R_ADMIN))
+			/*
+			// F13 REMOVAL - NO BACKGROUNDS
 			var/list/all_backgrounds = decls_repository.get_decls_of_subtype(/decl/background_detail/heritage)
 			var/decl/background_detail/cult = all_backgrounds[pick(all_backgrounds)]
 			staff += "[uppertext(pick(staffjobs))] - [cult.get_random_name(pick(MALE, FEMALE))] a.k.a. '[C.key]'"
+			*/
+			staff += "[uppertext(pick(staffjobs))] - [random_name(pick(MALE, FEMALE), null)] a.k.a. '[C.key]'" // F13 EDIT - NO BACKGROUNDS
 		else if(C.holder.rights & R_MOD)
 			goodboys += "[C.key]"
 

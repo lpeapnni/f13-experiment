@@ -64,6 +64,8 @@
 			if(!(trait in pref.traits))
 				return FALSE
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	if(faction_restricted)
 		var/has_correct_faction = FALSE
 		for(var/cat_type in global.using_map.get_background_categories())
@@ -72,6 +74,7 @@
 				break
 		if(!has_correct_faction)
 			return FALSE
+	*/
 
 	return TRUE
 
@@ -420,7 +423,7 @@
 	/// Whether or not this equipment should replace pre-existing equipment.
 	var/replace_equipped = TRUE
 	/// List of types of background datums that will allow this loadout option.
-	var/list/faction_restricted
+	// var/list/faction_restricted // F13 REMOVAL - NO BACKGROUNDS
 	/// Species name to check the whitelist for.
 	var/whitelisted
 	/// If true, will try to apply tweaks and customisation to an already-existing instance of the spawn path.

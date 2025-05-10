@@ -187,10 +187,13 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	var/standing_jump_range = 2
 	var/list/maneuvers = list(/decl/maneuver/leap)
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	var/list/available_background_info =            list()
 	var/list/force_background_info =                list()
 	var/list/default_background_info =              list()
 	var/list/additional_available_background_info = list()
+	*/
 	var/max_players
 
 	// Order matters, higher pain level should be higher up
@@ -226,6 +229,11 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 
 	/// List of emote types that this species can use by default.
 	var/list/default_emotes
+
+	// F13 EDIT START - NO BACKGROUNDS (Moving language info to species)
+	var/list/additional_langs
+	var/list/secondary_langs
+	// F13 EDIT END
 
 /decl/species/proc/build_codex_strings()
 
@@ -355,6 +363,8 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	else if(length(available_pronouns) && !default_pronouns)
 		default_pronouns = available_pronouns[1]
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	for(var/cat_type in global.using_map.get_background_categories())
 
 		var/force_val = force_background_info[cat_type]
@@ -377,6 +387,15 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 
 		if(!default_background_info[cat_type])
 			default_background_info[cat_type] = global.using_map.default_background_info[cat_type]
+	*/
+
+	// F13 EDIT START - NO BACKGROUNDS
+	// Remove any overlap for the sake of presentation.
+	if(LAZYLEN(secondary_langs))
+		if(LAZYLEN(additional_langs))
+			secondary_langs -= additional_langs
+			UNSETEMPTY(secondary_langs)
+	// F13 EDIT END
 
 	if(species_hud)
 		species_hud = new species_hud
@@ -777,8 +796,11 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 /decl/species/proc/modify_preview_appearance(mob/living/human/dummy/mannequin)
 	return mannequin
 
+/*
+// F13 REMOVAL - NO BACKGROUNDS
 /decl/species/proc/get_default_background_datum_by_flag(background_flag)
 	for(var/cat_type in default_background_info)
 		var/decl/background_category/background_cat = GET_DECL(cat_type)
 		if(background_cat.background_flags & background_flag)
 			return GET_DECL(default_background_info[cat_type])
+*/

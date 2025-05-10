@@ -4,9 +4,12 @@
 /datum/event/trivial_news/announce()
 	var/author = "Editor Mike Hammers"
 	var/channel = "The Gibson Gazette"
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	var/decl/background_detail/location/affected_dest = global.using_map.get_random_location()
 	if(!istype(affected_dest))
 		return
+	*/
 	var/body = pick(
 		"Armadillos want aardvarks removed from dictionary claims 'here first'.",\
 		"Angel found dancing on pinhead ordered to stop; cited for public nuisance.",\
@@ -15,6 +18,8 @@
 		"Rock and paper sues scissors for discrimination.",\
 		"Steak tell-all book reveals he never liked sitting by potato.",\
 		"Woodchuck stops counting how many times he's chucked 'Never again'.",\
+		/*
+		// F13 REMOVAL - NO BACKGROUNDS
 		"[affected_dest.name] clerk first person able to pronounce '@*$%!'.",\
 		"[affected_dest.name] delis serving boiled paperback dictionaries, 'Adjectives chewy' customers declare.",\
 		"[affected_dest.name] weather deemed 'boring'; meteors and rad storms to be imported.",\
@@ -52,6 +57,7 @@
 		"Scientist Discovers Gravity While Falling Down Stairs",\
 		"Shipment Of Apples Overturns, [affected_dest.name] Diner Offers Applesauce Special",\
 		"Spotted Owl Spotted on [affected_dest.name]",\
+		*/
 		"From The Desk Of Wise Guy Sammy: One Word In This Gazette Is Sdrawkcab",\
 		"From The Desk Of Wise Guy Sammy: It's Hard To Have Too Much Shelf Space",\
 		"From The Desk Of Wise Guy Sammy: Wine And Friendships Get Better With Age",\

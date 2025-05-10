@@ -19,8 +19,12 @@
 	if(!istype(H))
 		return
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	var/decl/background_detail/background = H.get_background_datum_by_flag(BACKGROUND_FLAG_CITIZENSHIP)
 	var/pob = background ? background.name : "Unset"
+	*/
+	var/pob = "Unset" // F13 EDIT - NO BACKGROUNDS
 
 	var/fingerprint = H.get_full_print(ignore_blockers = TRUE) || "N/A"
 	var/decl/pronouns/pronouns = H.get_pronouns(ignore_coverings = TRUE)

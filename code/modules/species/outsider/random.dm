@@ -38,9 +38,13 @@
 
 	available_bodytypes = list(/decl/bodytype/alium)
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	force_background_info = list(
 		/decl/background_category/heritage = /decl/background_detail/heritage/hidden/alium
 	)
+	*/
+	additional_langs = list(/decl/language/alium) // F13 EDIT - NO BACKGROUNDS
 
 	exertion_effect_chance = 10
 	exertion_hydration_scale = 1
@@ -136,7 +140,11 @@
 	var/mob/living/human/H = user
 	new /obj/item/implanter/translator(get_turf(src))
 	H.change_species(SPECIES_ALIEN)
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	var/decl/background_detail/background = H.get_background_datum_by_flag(BACKGROUND_FLAG_NAMING)
 	H.fully_replace_character_name(background.get_random_name(H, H.gender))
+	*/
+	H.fully_replace_character_name(random_name(H.gender, SPECIES_ALIEN)) // F13 EDIT - NO BACKGROUNDS
 	H.rename_self("Humanoid Alien", 1)
 	return TRUE

@@ -1,3 +1,5 @@
+/*
+// F13 REMOVAL - NO BACKGROUNDS
 #define GET_ALLOWED_VALUES(write_to, check_key) \
 	var/decl/species/S = get_species_by_key(pref.species); \
 	if(!S) { \
@@ -141,3 +143,4 @@
 	. = ..()
 
 #undef GET_ALLOWED_VALUES
+*/

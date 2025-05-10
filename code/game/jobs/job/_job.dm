@@ -134,6 +134,8 @@
 
 /datum/job/proc/get_total_starting_money(var/mob/living/human/worker)
 	. = 4 * rand(75, 100) * economic_power
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	// Get an average economic power for our background.
 	var/background_mod =   0
 	var/background_count = 0
@@ -145,6 +147,7 @@
 	if(background_count)
 		background_mod /= background_count
 	. *= background_mod
+	*/
 	// Apply other mods.
 	. *= global.using_map.salary_modifier
 	// Apply a 50% bonus per skill level above minimum.

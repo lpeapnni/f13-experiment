@@ -364,9 +364,15 @@ var/global/list/time_prefs_fixed = list()
 		character.change_species(species, new_bodytype)
 
 	if(be_random_name)
+		/*
+		// F13 REMOVAL - NO BACKGROUNDS
 		var/decl/background_detail/background = get_background_datum_by_flag(BACKGROUND_FLAG_NAMING)
 		if(background)
 			real_name = background.get_random_name(gender)
+		*/
+		// F13 EDIT START - NO BACKGROUNDS
+		real_name = random_name(gender, species)
+		// F13 EDIT END
 
 	if(get_config_value(/decl/config/toggle/humans_need_surnames))
 		var/firstspace = findtext(real_name, " ")
@@ -439,8 +445,11 @@ var/global/list/time_prefs_fixed = list()
 	if(is_preview_copy)
 		return
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	for(var/token in background_info)
 		character.set_background_value(token, background_info[token], defer_language_update = TRUE)
+	*/
 	character.update_languages()
 	for(var/lang in alternate_languages)
 		character.add_language(lang)
