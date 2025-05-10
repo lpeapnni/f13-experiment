@@ -28,11 +28,18 @@
 	if(!istype(H))
 		return
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	var/decl/background_detail/background = H.get_background_datum_by_flag(BACKGROUND_FLAG_CITIZENSHIP)
 	var/pob = background ? background.name : "Unset"
 
 	background = H.get_background_datum_by_flag(BACKGROUND_FLAG_RELIGION)
 	var/religion = background ? background.name : "Unset"
+	*/
+	// F13 EDIT START - NO BACKGROUNDS
+	var/pob = "Unset"
+	var/religion = "Unset"
+	// F13 EDIT END
 
 	owner_rank = H.char_rank && H.char_rank.name
 	owner_name = H.real_name

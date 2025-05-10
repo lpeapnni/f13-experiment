@@ -39,6 +39,8 @@ var/global/arrest_security_status =  "Arrest"
 
 	// Add honorifics, etc.
 	var/formal_name = "Unset"
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	if(crewmember)
 		formal_name = crewmember.real_name
 		if(crewmember.client && crewmember.client.prefs)
@@ -48,6 +50,7 @@ var/global/arrest_security_status =  "Arrest"
 					formal_name = "[formal_name][background.get_formal_name_suffix()]"
 				else
 					formal_name = "[background.get_formal_name_prefix()][formal_name][background.get_formal_name_suffix()]"
+	*/
 
 	// Generic record
 	set_name(crewmember ? crewmember.real_name : "Unset")
@@ -98,6 +101,8 @@ var/global/arrest_security_status =  "Arrest"
 		var/gen_record = records[PREF_GEN_RECORD]
 		if(gen_record && !jobban_isbanned(crewmember, "Records"))
 			employment_record = html_decode(gen_record)
+		/*
+		// F13 REMOVAL - NO BACKGROUNDS
 		if(crewmember.client && crewmember.client.prefs)
 			var/list/qualifications
 			for(var/token in crewmember.client.prefs.background_info)
@@ -107,12 +112,16 @@ var/global/arrest_security_status =  "Arrest"
 					LAZYADD(qualifications, extra_note)
 			if(LAZYLEN(qualifications))
 				employment_record = "[employment_record ? "[employment_record]\[br\]" : ""][jointext(qualifications, "\[br\]>")]"
+		*/
 	set_employment_record(employment_record)
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	// Misc background info.
 	set_residence(crewmember ? html_decode(crewmember.get_background_datum_by_flag(BACKGROUND_FLAG_RESIDENCE)) : "Unset")
 	set_faction(crewmember ?   html_decode(crewmember.get_background_datum_by_flag(BACKGROUND_FLAG_IDEOLOGY))    : "Unset")
 	set_religion(crewmember ?  html_decode(crewmember.get_background_datum_by_flag(BACKGROUND_FLAG_RELIGION))    : "Unset")
+	*/
 
 	if(crewmember)
 		var/skills = list()

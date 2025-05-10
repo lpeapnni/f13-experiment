@@ -117,13 +117,19 @@
 		update_character_previews(mannequin)
 
 /datum/preferences/proc/get_random_name()
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	var/decl/background_detail/background = get_background_datum_by_flag(BACKGROUND_FLAG_NAMING)
 	if(istype(background))
 		return background.get_random_name(client?.mob, gender)
+	*/
 	return random_name(gender, species)
 
+/*
+// F13 REMOVAL - NO BACKGROUNDS
 /datum/preferences/proc/get_background_datum_by_flag(background_flag)
 	for(var/cat_type in background_info)
 		var/decl/background_category/background_cat = GET_DECL(cat_type)
 		if(istype(background_cat) && (background_cat.background_flags & background_flag))
 			return GET_DECL(background_info[cat_type])
+*/

@@ -198,8 +198,12 @@
 /obj/structure/gravemarker/random/proc/generate()
 	icon_state = pick("wood","cross")
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	var/decl/background_detail/S = GET_DECL(/decl/background_detail/heritage/human)
 	var/nam = S.get_random_name(null, pick(MALE,FEMALE))
+	*/
+	var/nam = random_name(pick(MALE,FEMALE), null) // F13 EDIT - NO BACKGROUNDS
 	var/cur_year = global.using_map.game_year
 	var/born = cur_year - rand(5,150)
 	var/died = max(cur_year - rand(0,70),born)

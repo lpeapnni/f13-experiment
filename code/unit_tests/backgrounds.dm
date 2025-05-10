@@ -1,3 +1,5 @@
+/*
+// F13 REMOVAL - NO BACKGROUNDS
 /datum/unit_test/background
 	name = "BACKGROUND: All Species Background Values Shall Be Of Valid Types And Length"
 
@@ -97,3 +99,4 @@
 		pass("All background values are valid.")
 	return 1
 
+*/

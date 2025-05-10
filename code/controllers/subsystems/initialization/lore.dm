@@ -13,7 +13,7 @@ SUBSYSTEM_DEF(lore)
 		"an old home", "right behind you", "standing above you", "someone near by", "a place forgotten"
 	)
 
-	var/list/tagged_info =             list()
+	// var/list/tagged_info =             list() // F13 REMOVAL - NO BACKGROUNDS
 	var/list/credits_other =           list("ATTACK! ATTACK! ATTACK!")
 	var/list/credits_adventure_names = list("QUEST", "FORCE", "ADVENTURE")
 	var/list/credits_crew_names =      list("EVERYONE")
@@ -29,6 +29,8 @@ SUBSYSTEM_DEF(lore)
 
 /datum/controller/subsystem/lore/Initialize()
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	var/list/all_backgrounds = decls_repository.get_decls_of_subtype(/decl/background_detail)
 	for(var/ftype in all_backgrounds)
 		var/decl/background_detail/background = all_backgrounds[ftype]
@@ -37,6 +39,7 @@ SUBSYSTEM_DEF(lore)
 				tagged_info[background.category] = list()
 			var/list/tag_list = tagged_info[background.category]
 			tag_list[background.name] = background
+	*/
 
 	for(var/jobtype in subtypesof(/datum/job))
 		var/datum/job/job = jobtype
@@ -47,8 +50,11 @@ SUBSYSTEM_DEF(lore)
 
 	. = ..()
 
+/*
+// F13 REMOVAL - NO BACKGROUNDS
 /datum/controller/subsystem/lore/proc/get_all_entries_tagged_with(var/token)
 	return tagged_info[token]
+*/
 
 /datum/controller/subsystem/lore/proc/refresh_credits_from_departments()
 	var/list/all_departments = decls_repository.get_decls_of_subtype(/decl/department)

@@ -108,11 +108,15 @@
 		var/raw_name = input(user, "Choose your character's name:", "Character Name")  as text|null
 		if (!isnull(raw_name) && CanUseTopic(user))
 
+			/*
+			// F13 REMOVAL - NO BACKGROUNDS
 			var/decl/background_detail/check = pref.get_background_datum_by_flag(BACKGROUND_FLAG_NAMING)
 			if(!istype(check))
 				return TOPIC_NOACTION
 
 			var/new_name = check.sanitize_background_name(raw_name, pref.species)
+			*/
+			var/new_name = sanitize_name(raw_name, allow_numbers = TRUE) // F13 EDIT - NO BACKGROUNDS
 			if(filter_block_message(user, new_name))
 				return TOPIC_NOACTION
 

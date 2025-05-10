@@ -8,12 +8,26 @@
 			LAZYDISTINCTADD(., M)
 
 /proc/random_name(gender, species)
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	if(species)
 		var/decl/species/current_species = get_species_by_key(species)
 		if(current_species)
 			var/decl/background_detail/background = current_species.get_default_background_datum_by_flag(BACKGROUND_FLAG_NAMING)
 			if(background)
 				return background.get_random_name(null, gender)
+	*/
+
+	// F13 EDIT START - NO BACKGROUNDS
+	if(species)
+		var/decl/species/current_species = get_species_by_key(species)
+		if(current_species)
+			for(var/lang in current_species.additional_langs)
+				if(GET_DECL(lang))
+					var/decl/language/lang_decl = GET_DECL(lang)
+					return lang_decl.get_random_name(null, gender)
+	// F13 EDIT END
+
 	return capitalize(pick(gender == FEMALE ? global.using_map.first_names_female : global.using_map.first_names_male)) + " " + capitalize(pick(global.using_map.last_names))
 
 /proc/random_skin_tone(var/decl/bodytype/current_bodytype)

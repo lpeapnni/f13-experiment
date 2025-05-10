@@ -76,12 +76,16 @@
 		/decl/natural_attack/bite/sharp
 	)
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	force_background_info = list(
 		/decl/background_category/heritage =   /decl/background_detail/heritage/ascent,
 		/decl/background_category/homeworld = /decl/background_detail/location/kharmaani,
 		/decl/background_category/faction =   /decl/background_detail/faction/ascent_alate,
 		/decl/background_category/religion =  /decl/background_detail/religion/kharmaani
 	)
+	*/
+	additional_langs = list(/decl/language/mantid/worldnet, /decl/language/mantid) // F13 EDIT - NO BACKGROUNDS
 
 	pain_emotes_with_pain_level = list(
 			list(/decl/emote/visible/ascent_shine, /decl/emote/visible/ascent_dazzle) = 80,
@@ -112,9 +116,12 @@
 	push_flags =              ALLMOBS
 	swap_flags =              ALLMOBS
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	force_background_info = list(
 		/decl/background_category/heritage =   /decl/background_detail/heritage/ascent,
 		/decl/background_category/homeworld = /decl/background_detail/location/kharmaani,
 		/decl/background_category/faction =   /decl/background_detail/faction/ascent_gyne,
 		/decl/background_category/religion =  /decl/background_detail/religion/kharmaani
 	)
+	*/

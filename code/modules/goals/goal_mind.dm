@@ -30,6 +30,8 @@
 	var/list/available_goals = SSgoals.global_personal_goals ? SSgoals.global_personal_goals.Copy() : list()
 	if(job && LAZYLEN(job.possible_goals))
 		available_goals |= job.possible_goals
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	if(ishuman(current))
 		var/mob/living/human/H = current
 		for(var/token in H.background_info)
@@ -37,6 +39,7 @@
 			var/list/new_goals = background.get_possible_personal_goals(job ? job.department_types : null)
 			if(LAZYLEN(new_goals))
 				available_goals |= new_goals
+	*/
 	if(isnull(add_amount))
 		var/min_goals = 1
 		var/max_goals = 3

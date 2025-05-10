@@ -33,11 +33,15 @@
 	death_message = "becomes completely motionless..."
 	available_pronouns = list(/decl/pronouns/neuter)
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	force_background_info = list(
 		/decl/background_category/heritage =   /decl/background_detail/heritage/hidden/cultist,
 		/decl/background_category/homeworld = /decl/background_detail/location/stateless,
 		/decl/background_category/faction =   /decl/background_detail/faction/other
 	)
+	*/
+	additional_langs = list(/decl/language/cultcommon) // F13 EDIT - NO BACKGROUNDS
 
 	traits = list(/decl/trait/metabolically_inert = TRAIT_LEVEL_EXISTS)
 

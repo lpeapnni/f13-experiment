@@ -24,6 +24,8 @@
 
 /mob/living/human/corpse/Initialize(mapload, species_name, datum/mob_snapshot/supplied_appearance, obj/abstract/landmark/corpse/corpse)
 	. = ..(mapload, species_name, supplied_appearance) // do not pass the corpse landmark
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	var/decl/background_detail/background = get_background_datum_by_flag(BACKGROUND_FLAG_NAMING)
 	if(background)
 		var/newname = background.get_random_name(src, gender, species.name)
@@ -32,6 +34,7 @@
 			SetName(newname)
 			if(mind)
 				mind.name = real_name
+	*/
 	if(corpse)
 		corpse.randomize_appearance(src, get_species_name())
 		corpse.equip_corpse_outfit(src)

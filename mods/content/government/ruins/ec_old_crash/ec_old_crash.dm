@@ -70,6 +70,8 @@
 /obj/item/paper/ecrashlog/Initialize()
 	. = ..()
 	var/shipname = "TEV [pick("Magellan", "Gagarin", "Drake", "Horizon", "Aurora")]"
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	var/decl/background_detail/S = GET_DECL(/decl/background_detail/heritage/human)
 	var/new_info = {"
 	I am Lieutenant Hao Ru, captain of [shipname], of the Terran Commonwealth Expeditionary Corps.<br>
@@ -89,7 +91,29 @@
 	I am Lieutenant Hao Ru, captain of [shipname] of the Terran Commonwealth Expeditionary Corps. I will be joining my crew in cryo now.<br>
 	<i>3rd December [global.using_map.game_year - 142]</i></tt>
 	"}
+	*/
+
+	// F13 EDIT START - NO BACKGROUNDS
+	var/new_info = {"
+	I am Lieutenant Hao Ru, captain of [shipname], of the Terran Commonwealth Expeditionary Corps.<br>
+	We are dying. The Ran Mission has failed.<br>
+	Our ship has suffered a catastrophic chain of failures whist crew was in cryotransit. It started with thruster controls going inoperable, and our auto-pilot was unable to adjust course away from an asteroid cluster. <br>
+	We've lost the navigational suite from impacts, and are flying blind. We have tried every option, and our engineers have ascertained that there is no way to repair it in the field.<br>
+	Most of the crew have accepted their fate quietly, and have opted to go back into cryo for a slim hope of rescue, if we were to be found before backup power runs out. I will soon join them, after completing my duty.<br>
+	I've used this module as a strongbox, because it is only one rated for re-entry. I leave the astrodata I managed to salvage here. It has a few promising scans. I would not want it to be wasted.<br>
+	Some of the crew wrote letters to their kin, in case we are found. They deserve any consolation they get, so I've put the letters here, too.<br>
+	The crew for this mission is:<br>
+	Ensign [random_name(pick(MALE,FEMALE), null)]<br>
+	Ensign [random_name(pick(MALE,FEMALE), null)]<br>
+	Chief Explorer [random_name(pick(MALE,FEMALE), null)]<br>
+	Senior Explorer [random_name(pick(MALE,FEMALE), null)]<br>
+	Senior Explorer [random_name(pick(MALE,FEMALE), null)]<br>
+	Explorer [random_name(pick(MALE,FEMALE), null)]<br>
+	I am Lieutenant Hao Ru, captain of [shipname] of the Terran Commonwealth Expeditionary Corps. I will be joining my crew in cryo now.<br>
+	<i>3rd December [global.using_map.game_year - 142]</i></tt>
+	"}
 	set_content(new_info)
+	// F13 EDIT END
 
 /obj/machinery/alarm/low/Initialize()
 	. = ..()

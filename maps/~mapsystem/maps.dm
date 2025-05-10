@@ -139,6 +139,8 @@ var/global/const/MAP_HAS_RANK   = 2		//Rank system, also togglable
 	// Can this map be voted for by players?
 	var/votable = TRUE
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	var/list/available_background_info = list(
 		/decl/background_category/homeworld = list(/decl/background_detail/location/other),
 		/decl/background_category/faction =   list(/decl/background_detail/faction/other),
@@ -152,6 +154,7 @@ var/global/const/MAP_HAS_RANK   = 2		//Rank system, also togglable
 		/decl/background_category/heritage =   /decl/background_detail/heritage/other,
 		/decl/background_category/religion =  /decl/background_detail/religion/other
 	)
+	*/
 
 	var/access_modify_region = list(
 		ACCESS_REGION_SECURITY = list(access_hos, access_change_ids),
@@ -194,6 +197,8 @@ var/global/const/MAP_HAS_RANK   = 2		//Rank system, also togglable
 	var/background_categories_generated = FALSE
 	var/list/_background_categories
 
+/*
+// F13 REMOVAL - NO BACKGROUNDS
 /datum/map/proc/get_background_categories()
 	if(!background_categories_generated)
 		if(isnull(_background_categories))
@@ -213,6 +218,7 @@ var/global/const/MAP_HAS_RANK   = 2		//Rank system, also togglable
 	if(length(options))
 		return GET_DECL(pick(options))
 	return GET_DECL(/decl/background_detail/location/other)
+*/
 
 /datum/map/proc/get_lobby_track(var/exclude)
 	var/lobby_track_type

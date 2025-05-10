@@ -33,7 +33,8 @@
 	species.handle_pre_spawn(src)
 	apply_species_appearance()
 	apply_bodytype_appearance()
-	apply_species_background_info()
+	// apply_species_background_info() // F13 REMOVAL - NO BACKGROUNDS
+	update_languages() // F13 EDIT - NO BACKGROUNDS
 	species.handle_post_spawn(src)
 	reset_blood()
 	full_prosthetic = null

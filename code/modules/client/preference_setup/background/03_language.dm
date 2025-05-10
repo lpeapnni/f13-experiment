@@ -71,6 +71,8 @@
 	if(!user)
 		return
 
+	/*
+	// F13 REMOVAL - NO BACKGROUNDS
 	for(var/thing in pref.background_info)
 		var/decl/background_detail/background = GET_DECL(pref.background_info[thing])
 		if(istype(background))
@@ -82,10 +84,25 @@
 			if(LAZYLEN(background.secondary_langs))
 				for(var/checklang in background.secondary_langs)
 					allowed_languages[checklang] = TRUE
+	*/
+
+	var/decl/species/current_species = get_species_by_key(pref.species) // F13 EDIT - NO BACKGROUNDS
 
 	var/list/language_types = decls_repository.get_decls_of_subtype(/decl/language)
 	for(var/thing in language_types)
 		var/decl/language/lang = language_types[thing]
+
+		// F13 EDIT START - NO BACKGROUNDS
+		if(current_species)
+			if(LAZYLEN(current_species.additional_langs))
+				for(var/checklang in current_species.additional_langs)
+					free_languages[checklang] =    TRUE
+					allowed_languages[checklang] = TRUE
+			if(LAZYLEN(current_species.secondary_langs))
+				for(var/checklang in current_species.secondary_langs)
+					allowed_languages[checklang] = TRUE
+		// F13 EDIT END
+
 		// Abstract, forbidden and restricted languages aren't supposed to be available to anyone in chargen.
 		if(lang.flags & (LANG_FLAG_FORBIDDEN|LANG_FLAG_RESTRICTED))
 			continue
