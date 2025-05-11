@@ -59,6 +59,12 @@
 	#include "../../mods/species/vox/_vox.dme"
 	*/
 
+	// FALLOUT MODPACKS START HERE
+
+	#include "../../mods/f13/content/round_stuff/_round_stuff.dme"
+
+	// FALLOUT MODPACKS END HERE
+
 	#define USING_MAP_DATUM /datum/map/modpack_testing
 
 #elif !defined(MAP_OVERRIDE)
