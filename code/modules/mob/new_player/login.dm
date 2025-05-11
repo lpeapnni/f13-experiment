@@ -35,6 +35,8 @@
 
 	show_lobby_menu(TRUE)
 
+	/*
+	// F13 REMOVAL
 	var/decl/security_state/security_state = GET_DECL(global.using_map.security_state)
 	var/decl/security_level/SL = security_state.current_security_level
 	var/alert_desc = ""
@@ -42,6 +44,7 @@
 		alert_desc = SL.up_description
 
 	to_chat(src, SPAN_NOTICE("The alert level on the [station_name()] is currently: <span class='[SL.light_color_class]'><B>[SL.name]</B></span>. [alert_desc]"))
+	*/
 
 	// bolds the changelog button on the interface so we know there are updates.
 	if(client.prefs?.lastchangelog != global.changelog_hash)
