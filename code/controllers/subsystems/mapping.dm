@@ -129,8 +129,11 @@ SUBSYSTEM_DEF(mapping)
 
 	old_maxz = world.maxz
 	// Build away sites.
+	/*
+	// F13 REMOVAL - NOT ANYMORE BITCH
 	global.using_map.build_away_sites()
 	global.using_map.build_planets()
+	*/
 
 	// Resize the world to the max template size to fix a BYOND bug with world resizing breaking events.
 	// REMOVE WHEN THIS IS FIXED: https://www.byond.com/forum/post/2833191
