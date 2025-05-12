@@ -122,7 +122,7 @@ var/global/const/MAP_HAS_RANK   = 2		//Rank system, also togglable
 	var/list/planet_size = list()
 	///The amount of z-levels generated for exoplanets. Default is 1. Be careful with this, since exoplanets are already pretty expensive.
 	var/planet_depth = 1
-	var/away_site_budget = 0
+	// var/away_site_budget = 0 // F13 REMOVAL - NO AWAY SITES
 
 	var/list/loadout_blacklist	//list of types of loadout items that will not be pickable
 
@@ -334,6 +334,8 @@ var/global/const/MAP_HAS_RANK   = 2		//Rank system, also togglable
 /datum/map/proc/send_welcome()
 	return
 
+/*
+// F13 REMOVAL - NO AWAY SITES
 /datum/map/proc/build_away_sites()
 #ifdef UNIT_TEST
 	report_progress("Unit testing, so not loading away sites")
@@ -365,6 +367,7 @@ var/global/const/MAP_HAS_RANK   = 2		//Rank system, also togglable
 
 	report_progress("Finished loading away sites, remaining budget [away_site_budget], remaining sites [sites_by_spawn_weight.len]")
 #endif
+*/
 
 /datum/map/proc/build_planets()
 #ifdef UNIT_TEST
