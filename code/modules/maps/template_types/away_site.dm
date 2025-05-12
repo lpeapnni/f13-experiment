@@ -1,3 +1,5 @@
+/*
+// F13 REMOVAL - NO AWAY SITES
 /datum/map_template/ruin/away_site
 	prefix = "maps/away/"
 	template_categories = list(MAP_TEMPLATE_CATEGORY_AWAYSITE)
@@ -6,3 +8,4 @@
 
 /datum/map_template/ruin/away_site/get_spawn_weight()
 	return spawn_weight
+*/
