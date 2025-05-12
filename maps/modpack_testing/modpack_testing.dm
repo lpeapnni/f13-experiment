@@ -61,7 +61,7 @@
 
 	// FALLOUT MODPACKS START HERE
 
-	#include "../../mods/f13/content/round_stuff/_round_stuff.dme"
+	#include "../../mods/f13/content/round_loop/_round_loop.dme"
 
 	// FALLOUT MODPACKS END HERE
 

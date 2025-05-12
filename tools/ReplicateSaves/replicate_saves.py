@@ -28,7 +28,6 @@ def main():
 	targetmaps = []
 	ignoremaps = [
 		"away",
-		"away_sites_testing",
 		"antag_spawn",
 		"example",
 		"modpack_testing",
