@@ -1,0 +1,6 @@
+#ifndef MODPACK_F13_CUSTOMIZATION
+#define MODPACK_F13_CUSTOMIZATION
+// BEGIN_INCLUDE
+#include "_customization.dm"
+// END_INCLUDE
+#endif
