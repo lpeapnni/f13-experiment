@@ -8,6 +8,7 @@
 #define SAC_SNOUT /decl/sprite_accessory_category/snout
 #define SAC_WINGS /decl/sprite_accessory_category/wings
 #define SAC_NECK /decl/sprite_accessory_category/neck
+
 // TODO: add genitals
 #define SAC_PENIS /decl/sprite_accessory_category/penis
 #define SAC_TESTES /decl/sprite_accessory_category/testes
