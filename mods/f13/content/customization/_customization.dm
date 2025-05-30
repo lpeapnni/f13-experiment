@@ -17,3 +17,7 @@
 
 /decl/modpack/f13_customization
 	name = "F13 Player Customization"
+
+/decl/modpack/f13_customization/pre_initialize()
+	..()
+	SSmodpacks.default_submap_whitelisted_species |= SPECIES_ANTHRO

@@ -19,7 +19,7 @@
 	onmob_state_modifiers = list(slot_w_uniform_str = "f")
 
 	override_limb_types = list(
-		BP_TAIL = /obj/item/organ/external/tail/anthro
+		BP_TAIL = /obj/item/organ/external/tail
 	)
 
 /decl/bodytype/anthro/get_default_grooming_results(obj/item/organ/external/limb, obj/item/grooming/tool)

@@ -2,5 +2,13 @@
 #define MODPACK_F13_CUSTOMIZATION
 // BEGIN_INCLUDE
 #include "_customization.dm"
+
+// #include "sprite_accessories/neck_feature/_accessory_neck.dm"
+// #include "sprite_accessories/snout/_accessory_snout.dm"
+// #include "sprite_accessories/wings/_accessory_wings.dm"
+
+#include "species/anthro/_anthro.dm"
+#include "species/anthro/datum/species.dm"
+#include "species/anthro/datum/species_bodytypes.dm"
 // END_INCLUDE
 #endif
