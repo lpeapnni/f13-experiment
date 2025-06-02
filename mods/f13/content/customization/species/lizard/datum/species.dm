@@ -78,3 +78,5 @@
 		/decl/emote/exertion/biological/breath,
 		/decl/emote/exertion/biological/pant
 	)
+
+	additional_langs = list(/decl/language/human/common, /decl/language/sign)

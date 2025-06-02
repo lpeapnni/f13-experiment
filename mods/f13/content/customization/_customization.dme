@@ -11,11 +11,19 @@
 #include "species/anthro/datum/species_bodytypes.dm"
 #include "species/anthro/datum/species.dm"
 
+#include "species/aquatic/_aquatic.dm"
+#include "species/aquatic/datum/species_bodytypes.dm"
+#include "species/aquatic/datum/species.dm"
+
 #include "species/lizard/_lizard.dm"
 #include "species/lizard/datum/autohiss.dm"
 #include "species/lizard/datum/blood.dm"
 #include "species/lizard/datum/species_bodytypes.dm"
 #include "species/lizard/datum/species.dm"
+
+#include "species/moth/_moth.dm"
+#include "species/moth/datum/species_bodytypes.dm"
+#include "species/moth/datum/species.dm"
 
 // END_INCLUDE
 #endif
