@@ -8,7 +8,14 @@
 // #include "sprite_accessories/wings/_accessory_wings.dm"
 
 #include "species/anthro/_anthro.dm"
-#include "species/anthro/datum/species.dm"
 #include "species/anthro/datum/species_bodytypes.dm"
+#include "species/anthro/datum/species.dm"
+
+#include "species/lizard/_lizard.dm"
+#include "species/lizard/datum/autohiss.dm"
+#include "species/lizard/datum/blood.dm"
+#include "species/lizard/datum/species_bodytypes.dm"
+#include "species/lizard/datum/species.dm"
+
 // END_INCLUDE
 #endif

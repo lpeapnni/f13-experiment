@@ -14,6 +14,7 @@
 	accessory_category = SAC_SNOUT
 	abstract_type = /decl/sprite_accessory/snout
 	color_blend = ICON_MULTIPLY
+	species_allowed = list(SPECIES_ANTHRO, SPECIES_AQUATIC)
 
 /decl/sprite_accessory/snout/none
 	name                        = "No Snout"

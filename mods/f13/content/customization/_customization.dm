@@ -21,3 +21,22 @@
 /decl/modpack/f13_customization/pre_initialize()
 	..()
 	SSmodpacks.default_submap_whitelisted_species |= SPECIES_ANTHRO
+	SSmodpacks.default_submap_whitelisted_species |= SPECIES_AQUATIC
+	SSmodpacks.default_submap_whitelisted_species |= SPECIES_LIZARD
+	SSmodpacks.default_submap_whitelisted_species |= SPECIES_MOTH
+
+// sprite accessory overrides for species compatability
+/decl/sprite_accessory/hair
+	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD, SPECIES_MOTH)
+
+/decl/sprite_accessory/facial_hair
+	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD, SPECIES_MOTH)
+
+/decl/sprite_accessory/marking
+	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)
+
+/decl/sprite_accessory/ears
+	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)
+
+/decl/sprite_accessory/tail
+	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)

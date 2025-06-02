@@ -12,6 +12,7 @@
 	accessory_category = SAC_NECK
 	abstract_type = /decl/sprite_accessory/neck
 	color_blend = ICON_MULTIPLY
+	species_allowed = list(SPECIES_MOTH)
 
 /decl/sprite_accessory/neck/none
 	name                        = "No Neck Fluff"

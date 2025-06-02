@@ -22,6 +22,16 @@
 		BP_TAIL = /obj/item/organ/external/tail
 	)
 
+	additional_emotes = list(
+		/decl/emote/visible/tail/swish,
+		/decl/emote/visible/tail/wag,
+		/decl/emote/visible/tail/sway,
+		/decl/emote/visible/tail/qwag,
+		/decl/emote/visible/tail/fastsway,
+		/decl/emote/visible/tail/swag,
+		/decl/emote/visible/tail/stopsway
+	)
+
 /decl/bodytype/anthro/get_default_grooming_results(obj/item/organ/external/limb, obj/item/grooming/tool)
 	if(tool?.grooming_flags & GROOMABLE_BRUSH)
 		return list(

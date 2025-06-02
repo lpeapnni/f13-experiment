@@ -12,6 +12,7 @@
 	accessory_category = SAC_WINGS
 	abstract_type = /decl/sprite_accessory/wings
 	color_blend = ICON_MULTIPLY
+	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)
 
 /decl/sprite_accessory/wings/none
 	name                        = "No Wings"
@@ -27,3 +28,5 @@
 	body_flags_denied           = null
 	grooming_flags              = null
 	draw_accessory              = FALSE
+
+// TODO: add 'hide wings' verb
