@@ -35,8 +35,5 @@
 /decl/sprite_accessory/marking
 	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)
 
-/decl/sprite_accessory/ears
-	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC)
-
 /decl/sprite_accessory/tail
 	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC)

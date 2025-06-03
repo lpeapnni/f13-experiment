@@ -16,7 +16,7 @@
 
 	default_sprite_accessories = list(
 		SAC_EARS = list(
-			/decl/sprite_accessory/ears/moth = list(SAM_COLOR = "#FFFFFF")
+			/decl/sprite_accessory/ears/f13/moth = list(SAM_COLOR = "#FFFFFF")
 		)
 	)
 

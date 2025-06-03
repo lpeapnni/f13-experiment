@@ -21,6 +21,12 @@
 	uid                     = "bodytype_lizard_fem"
 
 	default_sprite_accessories = list(
+		SAC_FRILLS = list(
+			/decl/sprite_accessory/frills/f13/simple = list(SAM_COLOR = "#598a55")
+		),
+		SAC_HORNS = list(
+			/decl/sprite_accessory/horns/f13/simple = list(SAM_COLOR = "#4D4D4D")
+		),
 		SAC_SNOUT = list(
 			/decl/sprite_accessory/snout/round = list(SAM_COLOR = "#598a55")
 		)
