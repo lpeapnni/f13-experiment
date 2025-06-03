@@ -13,6 +13,12 @@
 	base_color           = "#ffffff"
 	base_eye_color       = "#444444"
 
+	default_sprite_accessories = list(
+		SAC_SNOUT = list(
+			/decl/sprite_accessory/snout/shark = list(SAM_COLOR = "#D8D7D7", SAM_COLOR_INNER = "#ffffff")
+		)
+	)
+
 	nail_noun            = "claws"
 
 	associated_gender     = FEMALE

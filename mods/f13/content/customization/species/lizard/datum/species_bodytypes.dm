@@ -13,20 +13,18 @@
 	associated_gender       = FEMALE
 	onmob_state_modifiers   = list(slot_w_uniform_str = "f")
 	movement_slowdown       = 0.5
-	base_color              = "#066000"
+	base_color              = "#598a55"
 	appearance_flags        = HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 	eye_darksight_range     = 3
 	eye_flash_mod           = 1.2
 	nail_noun               = "claws"
 	uid                     = "bodytype_lizard_fem"
 
-	/*
 	default_sprite_accessories = list(
-		SAC_FRILLS = list(
-			/decl/sprite_accessory/frills/lizard/frills_long = list(SAM_COLOR = "#192e19")
+		SAC_SNOUT = list(
+			/decl/sprite_accessory/snout/round = list(SAM_COLOR = "#598a55")
 		)
 	)
-	*/
 
 	appearance_descriptors = list(
 		/datum/appearance_descriptor/height = 1.25,

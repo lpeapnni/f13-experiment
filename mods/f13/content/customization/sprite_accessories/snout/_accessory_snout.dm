@@ -6,15 +6,16 @@
 
 /decl/sprite_accessory/snout
 	hidden_by_gear_slot = slot_wear_mask_str
-	hidden_by_gear_flag = HIDEMASK
+	hidden_by_gear_flag = HIDEFACE|HIDEMASK
 	body_parts = list(BP_HEAD)
 	sprite_overlay_layer = FLOAT_LAYER-1
 	is_heritable = TRUE
-	icon = 'mods/f13/customization/icons/sprite_accessories/snouts.dmi'
+	icon = 'mods/f13/content/customization/icons/sprite_accessories/snouts.dmi'
 	accessory_category = SAC_SNOUT
 	abstract_type = /decl/sprite_accessory/snout
 	color_blend = ICON_MULTIPLY
-	species_allowed = list(SPECIES_ANTHRO, SPECIES_AQUATIC)
+	species_allowed = list(SPECIES_ANTHRO)
+	accessory_metadata_types = list(SAM_COLOR)
 
 /decl/sprite_accessory/snout/none
 	name                        = "No Snout"
