@@ -21,4 +21,12 @@
 		/decl/emote/exertion/biological/pant
 	)
 
+	available_accessory_categories = list(
+		SAC_EARS,
+		// SAC_NECK,
+		// SAC_WINGS,
+		SAC_COSMETICS,
+		SAC_MARKINGS
+	)
+
 	additional_langs = list(/decl/language/human/common, /decl/language/sign)

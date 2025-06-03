@@ -8,7 +8,7 @@
 	hidden_by_gear_slot  = slot_head_str
 	hidden_by_gear_flag  = BLOCK_HEAD_HAIR
 	body_parts           = list(BP_HEAD)
-	sprite_overlay_layer = FLOAT_LAYER
+	sprite_overlay_layer = FLOAT_LAYER + 1
 	is_heritable         = TRUE
 	icon                 = 'icons/mob/human_races/species/default_ears.dmi'
 	accessory_category   = SAC_EARS

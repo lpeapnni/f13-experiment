@@ -61,23 +61,17 @@
 	accessory_metadata_types = list(SAM_COLOR, SAM_COLOR_INNER)
 	species_allowed = list(SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)
 
-// akula snouts
-
 /decl/sprite_accessory/snout/sergal
 	name = "Sergal"
 	uid = "acc_snout_sergal"
 	icon_state = "sergal"
 	accessory_metadata_types = list(SAM_COLOR, SAM_COLOR_INNER)
-	species_allowed = list(SPECIES_ANTHRO, SPECIES_AQUATIC)
 
 /decl/sprite_accessory/snout/shark
 	name = "Shark"
 	uid = "acc_snout_shark"
 	icon_state = "shark"
 	accessory_metadata_types = list(SAM_COLOR, SAM_COLOR_INNER)
-	species_allowed = list(SPECIES_ANTHRO, SPECIES_AQUATIC)
-
-// everything else
 
 /decl/sprite_accessory/snout/canid
 	name = "Canid (Long)"

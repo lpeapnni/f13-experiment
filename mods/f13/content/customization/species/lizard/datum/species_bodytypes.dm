@@ -82,5 +82,5 @@
 	uid                   = "bodytype_lizard_masc"
 
 /obj/item/organ/external/tail/lizard
-	tail_icon             = 'mods/species/bayliens/unathi/icons/tail.dmi'
+	tail_icon             = 'mods/species/bayliens/unathi/icons/tail.dmi' // TODO: REPLACE THIS SHIT
 	tail_animation_states = 9

@@ -3,9 +3,13 @@
 // BEGIN_INCLUDE
 #include "_customization.dm"
 
+#include "sprite_accessories/ears/ears.dm"
+
 // #include "sprite_accessories/neck_feature/_accessory_neck.dm"
+
 #include "sprite_accessories/snout/_accessory_snout.dm"
 #include "sprite_accessories/snout/snouts.dm"
+
 // #include "sprite_accessories/wings/_accessory_wings.dm"
 
 #include "species/anthro/_anthro.dm"

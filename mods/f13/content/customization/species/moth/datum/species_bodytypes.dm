@@ -14,6 +14,12 @@
 	base_color           = "#ffffff"
 	base_eye_color       = "#444444"
 
+	default_sprite_accessories = list(
+		SAC_EARS = list(
+			/decl/sprite_accessory/ears/moth = list(SAM_COLOR = "#FFFFFF")
+		)
+	)
+
 	nail_noun            = "claws"
 
 	/*
