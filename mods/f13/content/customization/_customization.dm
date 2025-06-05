@@ -35,5 +35,6 @@
 /decl/sprite_accessory/marking
 	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)
 
-/decl/sprite_accessory/tail
-	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC)
+// fake tail so that animations actually work
+/obj/item/organ/external/tail/anthro
+	tail_animation_states = 1

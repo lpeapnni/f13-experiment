@@ -124,6 +124,8 @@
 /mob/living/proc/get_current_tail_image()
 	return get_current_mob_overlay(HO_TAIL_LAYER) || get_current_mob_underlay(HU_TAIL_LAYER)
 
+/*
+// F13 REMOVAL - 4 SPRITES FOR A SINGLE TAIL IS FUCKING INSANE
 /mob/living/proc/animate_tail_once(var/update_icons=1)
 	var/obj/item/organ/external/tail/tail_organ = get_organ(BP_TAIL, /obj/item/organ/external/tail)
 	if(!tail_organ || (tail_organ.limb_flags & ORGAN_FLAG_SKELETAL))
@@ -160,3 +162,20 @@
 		if(tail_states)
 			return set_tail_animation_state("_idle[rand(1, tail_states)]", update_icons)
 	return set_tail_animation_state(null, update_icons)
+*/
+
+// F13 EDIT START
+/mob/living/proc/animate_tail_start(var/update_icons=1)
+	var/obj/item/organ/external/tail/tail_organ = get_organ(BP_TAIL, /obj/item/organ/external/tail)
+	if(!tail_organ || (tail_organ.limb_flags & ORGAN_FLAG_SKELETAL))
+		return
+	var/tail_states = tail_organ.get_tail_animation_states()
+	if(tail_states)
+		return set_tail_animation_state("_wagging[rand(1, tail_states)]", update_icons)
+
+/mob/living/proc/animate_tail_reset(var/update_icons=1)
+	var/obj/item/organ/external/tail/tail_organ = get_organ(BP_TAIL, /obj/item/organ/external/tail)
+	if(!tail_organ || (tail_organ.limb_flags & ORGAN_FLAG_SKELETAL))
+		return
+	return set_tail_animation_state(null, update_icons)
+// F13 EDIT END

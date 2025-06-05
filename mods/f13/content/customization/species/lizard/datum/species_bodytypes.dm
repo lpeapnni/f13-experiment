@@ -37,7 +37,7 @@
 		/datum/appearance_descriptor/build =  1.25
 	)
 
-	override_limb_types = list(BP_TAIL = /obj/item/organ/external/tail/lizard)
+	override_limb_types = list(BP_TAIL = /obj/item/organ/external/tail/anthro)
 
 	cold_level_1 = 280 //Default 260 - Lower is better
 	cold_level_2 = 220 //Default 200
@@ -62,13 +62,8 @@
 	)
 
 	additional_emotes = list(
-		/decl/emote/visible/tail/swish,
 		/decl/emote/visible/tail/wag,
-		/decl/emote/visible/tail/sway,
-		/decl/emote/visible/tail/qwag,
-		/decl/emote/visible/tail/fastsway,
-		/decl/emote/visible/tail/swag,
-		/decl/emote/visible/tail/stopsway
+		/decl/emote/visible/tail/stopwag
 	)
 
 /decl/bodytype/lizard/get_default_grooming_results(obj/item/organ/external/limb, obj/item/grooming/tool)

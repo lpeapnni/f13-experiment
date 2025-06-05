@@ -28,17 +28,12 @@
 	onmob_state_modifiers = list(slot_w_uniform_str = "f")
 
 	override_limb_types = list(
-		BP_TAIL = /obj/item/organ/external/tail
+		BP_TAIL = /obj/item/organ/external/tail/anthro
 	)
 
 	additional_emotes = list(
-		/decl/emote/visible/tail/swish,
 		/decl/emote/visible/tail/wag,
-		/decl/emote/visible/tail/sway,
-		/decl/emote/visible/tail/qwag,
-		/decl/emote/visible/tail/fastsway,
-		/decl/emote/visible/tail/swag,
-		/decl/emote/visible/tail/stopsway
+		/decl/emote/visible/tail/stopwag
 	)
 
 /decl/bodytype/aquatic/masculine

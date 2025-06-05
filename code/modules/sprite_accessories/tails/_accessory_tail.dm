@@ -31,7 +31,8 @@
 	var/hair_blend = ICON_ADD
 
 /decl/sprite_accessory/tail/none
-	name                        = "Default Tail"
+	// name                        = "Default Tail" // F13 REMOVAL
+	name                        = "None" // F13 EDIT
 	icon_state                  = "none"
 	uid                         = "acc_tail_none"
 	bodytypes_allowed           = null
@@ -43,8 +44,10 @@
 	body_flags_allowed          = null
 	body_flags_denied           = null
 	grooming_flags              = null
-	draw_accessory              = FALSE
+	// draw_accessory              = FALSE // F13 REMOVAL
 
+/*
+// F13 REMOVAL - FUCK THIS SPECIES TAIL SHIT
 /decl/sprite_accessory/tail/none/hide_tail
 	name           = "Hide Species Tail"
 	uid            = "acc_tail_hidden"
@@ -52,6 +55,7 @@
 
 /decl/sprite_accessory/tail/none/hide_tail/accessory_is_available(mob/owner, decl/species/species, decl/bodytype/bodytype, list/traits)
 	. = ..() && (BP_TAIL in bodytype.has_limbs)
+*/
 
 /*
 // Leaving these in for future reference.

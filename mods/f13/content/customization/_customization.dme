@@ -15,7 +15,7 @@
 #include "sprite_accessories/snout/_accessory_snout.dm"
 #include "sprite_accessories/snout/snouts.dm"
 
-// #include "sprite_accessories/tail/tails.dm"
+#include "sprite_accessories/tail/tails.dm"
 
 // #include "sprite_accessories/wings/_accessory_wings.dm"
 // #include "sprite_accessories/wings/wings.dm"
