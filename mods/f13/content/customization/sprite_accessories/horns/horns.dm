@@ -2,7 +2,7 @@
 	abstract_type = /decl/sprite_accessory/horns/f13
 	icon = 'mods/f13/content/customization/icons/sprite_accessories/horns/horns.dmi'
 	color_blend = ICON_MULTIPLY
-	species_allowed = list(SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)
+	species_allowed = list(SPECIES_DEMIHUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)
 
 /decl/sprite_accessory/horns/f13/angler
 	name = "Angler"

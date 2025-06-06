@@ -12,7 +12,7 @@
 	accessory_category = SAC_WINGS
 	abstract_type = /decl/sprite_accessory/wings
 	color_blend = ICON_MULTIPLY
-	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)
+	species_allowed = list(SPECIES_DEMIHUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)
 
 /decl/sprite_accessory/wings/none
 	name                        = "No Wings"

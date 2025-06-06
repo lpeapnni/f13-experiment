@@ -2,26 +2,26 @@
 	abstract_type = /decl/sprite_accessory/ears/f13
 	icon = 'mods/f13/content/customization/icons/sprite_accessories/ears/ears.dmi'
 	color_blend = ICON_MULTIPLY
-	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC)
+	species_allowed = list(SPECIES_DEMIHUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC)
 
 /decl/sprite_accessory/ears/f13/antenna_fuzzball
 	name = "Antenna (Fuzzball)"
 	uid = "acc_ears_f13_antenna_fuzzball"
 	icon_state = "antenna_fuzzball"
 	accessory_metadata_types = list(SAM_COLOR, SAM_COLOR_INNER)
-	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_MOTH)
+	species_allowed = list(SPECIES_DEMIHUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_MOTH)
 
 /decl/sprite_accessory/ears/f13/antenna_simple
 	name = "Antenna"
 	uid = "acc_ears_f13_antenna_simple"
 	icon_state = "antenna_simple"
-	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_MOTH)
+	species_allowed = list(SPECIES_DEMIHUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_MOTH)
 
 /decl/sprite_accessory/ears/f13/antenna_simple_alt
 	name = "Antenna (Alt)"
 	uid = "acc_ears_f13_antenna_simple_alt"
 	icon_state = "antenna_simple_alt"
-	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_MOTH)
+	species_allowed = list(SPECIES_DEMIHUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_MOTH)
 
 /decl/sprite_accessory/ears/f13/kitty
 	name = "Cat"

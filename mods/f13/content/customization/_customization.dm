@@ -2,6 +2,7 @@
 
 #define SPECIES_ANTHRO "Anthro"
 #define SPECIES_AQUATIC "Aquatic"
+#define SPECIES_DEMIHUMAN "Demihuman"
 #define SPECIES_LIZARD "Lizard"
 #define SPECIES_MOTH "Moth"
 
@@ -10,10 +11,12 @@
 #define SAC_NECK /decl/sprite_accessory_category/neck
 
 // TODO: add genitals
+/*
 #define SAC_PENIS /decl/sprite_accessory_category/penis
 #define SAC_TESTES /decl/sprite_accessory_category/testes
 #define SAC_BREASTS /decl/sprite_accessory_category/breasts
 #define SAC_VAGINA /decl/sprite_accessory_category/vagina
+*/
 
 /decl/modpack/f13_customization
 	name = "F13 Player Customization"
@@ -22,18 +25,19 @@
 	..()
 	SSmodpacks.default_submap_whitelisted_species |= SPECIES_ANTHRO
 	SSmodpacks.default_submap_whitelisted_species |= SPECIES_AQUATIC
+	SSmodpacks.default_submap_whitelisted_species |= SPECIES_DEMIHUMAN
 	SSmodpacks.default_submap_whitelisted_species |= SPECIES_LIZARD
 	SSmodpacks.default_submap_whitelisted_species |= SPECIES_MOTH
 
 // sprite accessory overrides for species compatability
 /decl/sprite_accessory/hair
-	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD, SPECIES_MOTH)
+	species_allowed = list(SPECIES_HUMAN, SPECIES_DEMIHUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD, SPECIES_MOTH)
 
 /decl/sprite_accessory/facial_hair
-	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD, SPECIES_MOTH)
+	species_allowed = list(SPECIES_HUMAN, SPECIES_DEMIHUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD, SPECIES_MOTH)
 
 /decl/sprite_accessory/marking
-	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)
+	species_allowed = list(SPECIES_HUMAN, SPECIES_DEMIHUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)
 
 // fake tail so that animations actually work
 /obj/item/organ/external/tail/anthro
