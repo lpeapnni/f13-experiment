@@ -3,8 +3,7 @@
 	icon = 'mods/f13/content/customization/icons/sprite_accessories/tail/anthro_tails.dmi'
 	color_blend = ICON_MULTIPLY
 	icon_animation_states = 1
-	species_allowed = list(SPECIES_DEMIHUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_LIZARD)
-	draw_accessory = TRUE
+	species_allowed = list(SPECIES_DEMIHUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC)
 
 /decl/sprite_accessory/tail/f13/australianshepherd
 	name = "Australian Shepherd"

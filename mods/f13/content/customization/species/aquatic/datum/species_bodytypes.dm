@@ -19,6 +19,9 @@
 		),
 		SAC_EARS = list(
 			/decl/sprite_accessory/ears/f13/shark = list(SAM_COLOR = "#D8D7D7")
+		),
+		SAC_TAIL = list(
+			/decl/sprite_accessory/tail/f13/shark = list(SAM_COLOR = "#ffffff")
 		)
 	)
 

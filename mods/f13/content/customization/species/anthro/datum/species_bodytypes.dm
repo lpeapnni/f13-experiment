@@ -22,6 +22,18 @@
 		BP_TAIL = /obj/item/organ/external/tail/anthro
 	)
 
+	default_sprite_accessories = list(
+		SAC_SNOUT = list(
+			/decl/sprite_accessory/snout/scanidalt2 = list(SAM_COLOR = "#ffffff")
+		),
+		SAC_EARS = list(
+			/decl/sprite_accessory/ears/f13/plain = list(SAM_COLOR = "#ffffff", SAM_COLOR_INNER = "#ff90ff")
+		),
+		SAC_TAIL = list(
+			/decl/sprite_accessory/tail/f13/wolf = list(SAM_COLOR = "#ffffff")
+		)
+	)
+
 	additional_emotes = list(
 		/decl/emote/visible/tail/wag,
 		/decl/emote/visible/tail/stopwag

@@ -15,7 +15,8 @@
 #include "sprite_accessories/snout/_accessory_snout.dm"
 #include "sprite_accessories/snout/snouts.dm"
 
-#include "sprite_accessories/tail/tails.dm"
+#include "sprite_accessories/tail/tails_anthro.dm"
+#include "sprite_accessories/tail/tails_lizard.dm"
 
 // #include "sprite_accessories/wings/_accessory_wings.dm"
 // #include "sprite_accessories/wings/wings.dm"
@@ -27,6 +28,10 @@
 #include "species/aquatic/_aquatic.dm"
 #include "species/aquatic/datum/species_bodytypes.dm"
 #include "species/aquatic/datum/species.dm"
+
+#include "species/demihuman/_demihuman.dm"
+#include "species/demihuman/datum/species_bodytypes.dm"
+#include "species/demihuman/datum/species.dm"
 
 #include "species/lizard/_lizard.dm"
 #include "species/lizard/datum/autohiss.dm"

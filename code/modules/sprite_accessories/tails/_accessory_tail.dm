@@ -32,7 +32,7 @@
 
 /decl/sprite_accessory/tail/none
 	// name                        = "Default Tail" // F13 REMOVAL
-	name                        = "None" // F13 EDIT
+	name                        = "No Tail" // F13 EDIT
 	icon_state                  = "none"
 	uid                         = "acc_tail_none"
 	bodytypes_allowed           = null

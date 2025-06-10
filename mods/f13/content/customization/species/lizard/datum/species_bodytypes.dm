@@ -29,6 +29,9 @@
 		),
 		SAC_SNOUT = list(
 			/decl/sprite_accessory/snout/round = list(SAM_COLOR = "#598a55")
+		),
+		SAC_TAIL = list(
+			/decl/sprite_accessory/tail/f13/lizard/smooth = list(SAM_COLOR = "#598a55")
 		)
 	)
 

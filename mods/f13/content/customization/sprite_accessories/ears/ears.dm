@@ -166,7 +166,7 @@
 	name = "Moth"
 	uid = "acc_ears_f13_moth"
 	icon_state = "moth"
-	species_allowed = list(SPECIES_HUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_MOTH)
+	species_allowed = list(SPECIES_DEMIHUMAN, SPECIES_ANTHRO, SPECIES_AQUATIC, SPECIES_MOTH)
 
 /decl/sprite_accessory/ears/f13/shark
 	name = "Shark"
