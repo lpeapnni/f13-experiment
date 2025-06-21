@@ -1,0 +1,47 @@
+#ifndef MODPACK_F13_CUSTOMIZATION
+#define MODPACK_F13_CUSTOMIZATION
+// BEGIN_INCLUDE
+#include "_customization.dm"
+
+#include "sprite_accessories/ears/ears.dm"
+
+#include "sprite_accessories/frills/frills.dm"
+
+#include "sprite_accessories/horns/horns.dm"
+
+// #include "sprite_accessories/neck_feature/_accessory_neck.dm"
+// #include "sprite_accessories/neck_feature/neck.dm"
+
+#include "sprite_accessories/snout/_accessory_snout.dm"
+#include "sprite_accessories/snout/snouts.dm"
+
+#include "sprite_accessories/tail/tails_anthro.dm"
+#include "sprite_accessories/tail/tails_lizard.dm"
+
+// #include "sprite_accessories/wings/_accessory_wings.dm"
+// #include "sprite_accessories/wings/wings.dm"
+
+#include "species/anthro/_anthro.dm"
+#include "species/anthro/datum/species_bodytypes.dm"
+#include "species/anthro/datum/species.dm"
+
+#include "species/aquatic/_aquatic.dm"
+#include "species/aquatic/datum/species_bodytypes.dm"
+#include "species/aquatic/datum/species.dm"
+
+#include "species/demihuman/_demihuman.dm"
+#include "species/demihuman/datum/species_bodytypes.dm"
+#include "species/demihuman/datum/species.dm"
+
+#include "species/lizard/_lizard.dm"
+#include "species/lizard/datum/autohiss.dm"
+#include "species/lizard/datum/blood.dm"
+#include "species/lizard/datum/species_bodytypes.dm"
+#include "species/lizard/datum/species.dm"
+
+#include "species/moth/_moth.dm"
+#include "species/moth/datum/species_bodytypes.dm"
+#include "species/moth/datum/species.dm"
+
+// END_INCLUDE
+#endif

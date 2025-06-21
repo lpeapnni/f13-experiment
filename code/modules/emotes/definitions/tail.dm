@@ -5,12 +5,15 @@
 /decl/emote/visible/tail/mob_can_use(mob/living/user, assume_available = FALSE)
 	return istype(user) && ..()
 
+/*
+// F13 REMOVAL - 4 SPRITES FOR A SINGLE TAIL IS FUCKING INSANE
 /decl/emote/visible/tail/swish
 	key = "swish"
 
 /decl/emote/visible/tail/swish/do_emote(mob/living/user)
 	user.animate_tail_once()
 	return TRUE
+*/
 
 /decl/emote/visible/tail/wag
 	key = "wag"
@@ -19,6 +22,8 @@
 	user.animate_tail_start()
 	return TRUE
 
+/*
+// F13 REMOVAL
 /decl/emote/visible/tail/sway
 	key = "sway"
 
@@ -53,3 +58,13 @@
 /decl/emote/visible/tail/stopsway/do_emote(mob/living/user)
 	user.set_tail_animation_state(null, TRUE)
 	return TRUE
+*/
+
+// F13 EDIT START
+/decl/emote/visible/tail/stopwag
+	key = "stopwag"
+
+/decl/emote/visible/tail/stopwag/do_emote(mob/living/user)
+	user.set_tail_animation_state(null, TRUE)
+	return TRUE
+// F13 EDIT END

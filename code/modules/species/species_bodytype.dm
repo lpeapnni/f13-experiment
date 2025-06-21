@@ -517,12 +517,20 @@ var/global/list/bodytypes_by_category = list()
 						. += "base tail state '[tail_state]' not present in icon '[tail_icon]'"
 					var/tail_states = tail_organ.get_tail_animation_states()
 					if(tail_states)
+						/*
+						// F13 REMOVAL
 						var/static/list/animation_modifiers = list(
 							"_idle",
 							"_slow",
 							"_loop",
 							"_once"
 						)
+						*/
+						// F13 EDIT START
+						var/static/list/animation_modifiers = list(
+							"_wagging"
+						)
+						// F13 EDIT END
 						for(var/modifier in animation_modifiers)
 							var/modified_state = "[tail_state][modifier]"
 							for(var/i = 1 to tail_states)

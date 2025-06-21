@@ -72,7 +72,8 @@
 
 /obj/item/organ/external/tail/proc/get_accessory_data()
 	if(tail_hidden && can_be_hidden())
-		return GET_DECL(/decl/sprite_accessory/tail/none/hide_tail)
+		// return GET_DECL(/decl/sprite_accessory/tail/none/hide_tail) // F13 REMOVAL
+		return GET_DECL(/decl/sprite_accessory/tail/none) // F13 EDIT
 	return get_sprite_accessory_by_category(SAC_TAIL)
 
 /obj/item/organ/external/tail/do_uninstall(in_place, detach, ignore_children, update_icon)

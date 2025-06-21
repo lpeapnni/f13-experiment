@@ -1,25 +1,38 @@
 /datum/appearance_descriptor/age
 	name = "age"
 	standalone_value_descriptors = list(
+		/*
+		// F13 REMOVAL - I HATE CHILDREN
 		"an infant" =      1,
 		"a toddler" =      3,
 		"a child" =        7,
 		"a teenager" =    13,
 		"a young adult" = 17,
+		*/
+		"a young adult" = 18, // F13 ADDITION
 		"an adult" =      25,
 		"middle-aged" =   40,
 		"aging" =         55,
 		"elderly" =       70
 	)
 
+	/*
+	// F13 REMOVAL - I HATE CHILDREN
 	chargen_min_index = 5
 	chargen_max_index = 8
+	*/
+
+	// F13 EDIT START - I HATE CHILDREN
+	chargen_min_index = 1
+	chargen_max_index = 5
+	// F13 EDIT END
+
 	comparative_value_descriptor_equivalent = "around the same age as you"
 	comparative_value_descriptors_smaller = list(
 		"somewhat younger than you",
 		"younger than you",
 		"much younger than you",
-		"a child compared to you"
+		// "a child compared to you" // F13 REMOVAL - I HATE CHILDREN
 	)
 	comparative_value_descriptors_larger = list(
 		"slightly older than you",

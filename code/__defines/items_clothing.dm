@@ -214,10 +214,19 @@
 #define BP_CHEST        "chest"
 #define BP_GROIN        "groin"
 #define BP_TAIL         "tail"
+// F13 EDIT START - CUSTOMIZATION
+#define BP_WINGS "wings"
+#define BP_PENIS "penis"
+#define BP_TESTES "testes"
+#define BP_BREASTS "breasts"
+#define BP_VAGINA "vagina"
+// F13 EDIT END
 
 // Other inventory-related slots (also organs).
 #define BP_MOUTH  "mouth"
 
+/*
+// F13 REMOVAL - CUSTOMIZATION
 var/global/list/all_limb_tags = list(
 	BP_CHEST,
 	BP_GROIN,
@@ -252,6 +261,54 @@ var/global/list/all_limb_tags_by_depth = list(
 	BP_TAIL,
 	BP_CHEST
 )
+*/
+
+// F13 EDIT START - CUSTOMIZATION
+var/global/list/all_limb_tags = list(
+	BP_CHEST,
+	BP_GROIN,
+	BP_TAIL,
+	BP_HEAD,
+	BP_L_ARM,
+	BP_R_ARM,
+	BP_L_HAND,
+	BP_R_HAND,
+	BP_M_HAND,
+	BP_L_HAND_UPPER,
+	BP_R_HAND_UPPER,
+	BP_L_LEG,
+	BP_R_LEG,
+	BP_L_FOOT,
+	BP_R_FOOT,
+	BP_WINGS,
+	BP_PENIS,
+	BP_TESTES,
+	BP_BREASTS,
+	BP_VAGINA
+)
+var/global/list/all_limb_tags_by_depth = list(
+	BP_HEAD,
+	BP_L_HAND,
+	BP_L_HAND_UPPER,
+	BP_R_HAND,
+	BP_R_HAND_UPPER,
+	BP_M_HAND,
+	BP_L_ARM,
+	BP_R_ARM,
+	BP_L_FOOT,
+	BP_R_FOOT,
+	BP_PENIS,
+	BP_TESTES,
+	BP_VAGINA,
+	BP_L_LEG,
+	BP_R_LEG,
+	BP_GROIN,
+	BP_WINGS,
+	BP_TAIL,
+	BP_BREASTS,
+	BP_CHEST
+)
+// F13 EDIT END
 
 var/global/list/default_onmob_icons = list(
 	BP_L_HAND =          'icons/mob/onmob/items/lefthand.dmi',
